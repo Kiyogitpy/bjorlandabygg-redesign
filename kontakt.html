@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,600..800&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=5">
+<link rel="stylesheet" href="css/style.css?v=6">
 </head>
 <body data-doc="doc.contact">
 <a class="skip" href="#main" data-i18n="skip">Hoppa till innehållet</a>
@@ -23,7 +23,7 @@
       <button type="button" data-lang="sv" aria-pressed="true">SV</button>
       <button type="button" data-lang="en" aria-pressed="false">EN</button>
     </div>
-    <a class="tel" href="tel:+46708929494" data-i18n="tel.label">Ring 0708-92 94 94</a>
+    <a class="tel" href="tel:+46708929494" data-i18n-aria="tel.label" aria-label="Ring 0708-92 94 94"><svg class="tel-ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span data-i18n="tel.label">Ring 0708-92 94 94</span></a>
   </div>
 </header>
 <main id="main">
@@ -35,30 +35,35 @@
   </section>
   <section class="contact">
     <div class="wrap">
-      <form id="contact-form" novalidate>
-        <label><span data-i18n="f.name">Namn *</span><input name="name" autocomplete="name" required></label>
-        <label><span data-i18n="f.tel">Telefon *</span><input name="tel" type="tel" autocomplete="tel" required></label>
-        <label><span data-i18n="f.mail">E-post *</span><input name="email" type="email" autocomplete="email" required></label>
-        <label><span data-i18n="f.msg">Meddelande *</span><textarea name="message" required></textarea></label>
-        <div><button class="btn btn-primary" type="submit"><span data-i18n="f.send">Skicka</span> <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></button></div>
-        <p class="status" id="form-status" role="status" aria-live="polite"></p>
-      </form>
       <aside class="card-address">
         <h2 data-i18n="c.card">Björlanda Bygg AB</h2>
-        <address>Friluftsvägen 2A<br>423 63 Torslanda<br><br>Patrik Pettersson</address>
-        <div class="row"><span class="k" data-i18n="c.tel">Tel:</span><a href="tel:+46708929494">0708-92 94 94</a></div>
-        <div class="row"><span class="k" data-i18n="c.mail">Mail:</span><a href="mailto:patrik@bjorlandabygg.se">patrik@bjorlandabygg.se</a></div>
+        <div class="row"><span class="k" data-i18n="c.tel">Tel:</span><a class="big" href="tel:+46708929494">0708-92 94 94</a></div>
+        <div class="row"><span class="k" data-i18n="c.mail">Mail:</span><a class="big" href="mailto:patrik@bjorlandabygg.se">patrik@bjorlandabygg.se</a></div>
+        <address>Patrik Pettersson<br>Friluftsvägen 2A<br>423 63 Torslanda</address>
       </aside>
+      <form id="contact-form" novalidate aria-describedby="form-note">
+        <p class="form-note" id="form-note" data-i18n="f.note">Skicka öppnar ditt e-postprogram med meddelandet ifyllt.</p>
+        <label><span data-i18n="f.name">Namn *</span><input id="f-name" name="name" autocomplete="name" required></label>
+        <label><span data-i18n="f.tel">Telefon *</span><input id="f-tel" name="tel" type="tel" autocomplete="tel" required></label>
+        <label><span data-i18n="f.mail">E-post *</span><input id="f-email" name="email" type="email" autocomplete="email" required></label>
+        <label><span data-i18n="f.msg">Meddelande *</span><textarea id="f-message" name="message" required></textarea></label>
+        <div><button class="btn btn-primary" type="submit"><span data-i18n="f.send">Skicka</span> <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></button></div>
+        <p class="status" id="form-status" role="status" aria-live="polite"></p>
+        <p class="fallback"><span data-i18n="f.fallback">Fungerar det inte? Skriv direkt till</span> <a href="mailto:patrik@bjorlandabygg.se">patrik@bjorlandabygg.se</a> <button class="btn-text" type="button" id="copy-mail" data-i18n="f.copy">Kopiera adress</button></p>
+      </form>
+      
+      
     </div>
   </section>
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <span data-i18n="foot.copy">© 2015 Björlanda Bygg AB</span>
+    <span data-i18n="foot.copy">© 2026 Björlanda Bygg AB</span>
+    <nav class="foot-nav" data-i18n-aria="nav.label" aria-label="Huvudmeny"><a href="index.html" data-i18n="nav.home">Hem</a><a href="kontakt.html" data-i18n="nav.contact">Kontakt</a></nav>
     <span>Friluftsvägen 2A, 423 63 Torslanda · <a href="tel:+46708929494">0708-92 94 94</a></span>
     <a class="ig" href="https://www.instagram.com/bjorlandabygg/" target="_blank" rel="noopener" aria-label="Instagram: @bjorlandabygg"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a>
   </div>
 </footer>
-<script src="js/main.js?v=4"></script>
+<script src="js/main.js?v=6"></script>
 </body>
 </html>

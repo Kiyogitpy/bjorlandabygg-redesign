@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,600..800&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=5">
+<link rel="stylesheet" href="css/style.css?v=6">
 </head>
 <body data-doc="doc.home">
 <a class="skip" href="#main" data-i18n="skip">Hoppa till innehållet</a>
@@ -23,7 +23,7 @@
       <button type="button" data-lang="sv" aria-pressed="true">SV</button>
       <button type="button" data-lang="en" aria-pressed="false">EN</button>
     </div>
-    <a class="tel" href="tel:+46708929494" data-i18n="tel.label">Ring 0708-92 94 94</a>
+    <a class="tel" href="tel:+46708929494" data-i18n-aria="tel.label" aria-label="Ring 0708-92 94 94"><svg class="tel-ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span data-i18n="tel.label">Ring 0708-92 94 94</span></a>
   </div>
 </header>
 <main id="main">
@@ -34,7 +34,7 @@
         <p class="lede" data-i18n="hero.lede"><strong>35 års erfarenhet</strong> från tanke till färdigt arbete.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="#arbeten"><span data-i18n="hero.cta">Se våra arbeten</span> <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M6 14l6 6 6-6"/></svg></a>
-          <a class="btn btn-ghost" href="tel:+46708929494" data-i18n="hero.call">Ring Patrik</a>
+          <a class="btn-text hero-call" href="tel:+46708929494" data-i18n="hero.call">Ring Patrik</a>
         </div>
       </div>
       <div class="gable"><img src="assets/img/cabin-sky.jpg" width="1600" height="976" alt="Rött timmerhus på en klippa mot blå himmel" data-i18n-alt="hero.alt"></div>
@@ -48,8 +48,8 @@
       <div class="ba-stage">
         <figure class="ba-fig">
           <div class="ba-frame" id="ba-frame">
-            <img class="ba-after" alt="" id="ba-after">
-            <img class="ba-before" alt="" id="ba-before">
+            <img class="ba-after" alt="" id="ba-after" width="1400" height="2100">
+            <img class="ba-before" alt="" id="ba-before" width="1400" height="2100">
             <span class="ba-tag b" data-i18n="ba.before">Före</span><span class="ba-tag a" data-i18n="ba.after">Efter</span>
             <span class="ba-line"></span>
             <span class="ba-knob"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span>
@@ -73,8 +73,8 @@
         <button class="tile t-roof" type="button"><img src="assets/img/work-roof.jpg" width="640" height="640" alt="" data-i18n-alt="alt.roof"><span class="cap" data-i18n="cap.out">Utomhus</span></button>
         <button class="tile t-oak" type="button"><img src="assets/img/work-kitchen-oak.jpg" width="640" height="480" alt="" data-i18n-alt="alt.oak" loading="lazy"><span class="cap" data-i18n="cap.kitchen">Kök</span></button>
         <button class="tile t-white" type="button"><img src="assets/img/work-kitchen-white.jpg" width="640" height="640" alt="" data-i18n-alt="alt.white" loading="lazy"><span class="cap" data-i18n="cap.kitchen">Kök</span></button>
-        <button class="tile t-van" type="button"><img src="assets/img/work-van-house.jpg" width="640" height="640" alt="" data-i18n-alt="alt.van" loading="lazy"><span class="cap" data-i18n="cap.co">Björlanda Bygg</span></button>
-        <button class="tile t-silver" type="button"><img src="assets/img/van-silver.jpg" width="1802" height="1126" alt="" data-i18n-alt="alt.silver" loading="lazy"><span class="cap" data-i18n="cap.co">Björlanda Bygg</span></button>
+        <button class="tile t-van" type="button"><img src="assets/img/work-van-house.jpg" width="640" height="640" alt="" data-i18n-alt="alt.van" loading="lazy"><span class="cap" data-i18n="cap.van">Våra bilar</span></button>
+        <button class="tile t-silver" type="button"><img src="assets/img/van-silver.jpg" width="1802" height="1126" alt="" data-i18n-alt="alt.silver" loading="lazy"><span class="cap" data-i18n="cap.van">Våra bilar</span></button>
       </div>
     </div>
   </section>
@@ -100,7 +100,7 @@
     <div class="wrap">
       <div>
         <h2 data-i18n="call.h2">För mer info:</h2>
-        <p data-i18n="call.p">Patrik Pettersson svarar själv.</p>
+        <p data-i18n="call.p">Du pratar direkt med Patrik Pettersson.</p>
       </div>
       <div>
         <a class="big-tel" href="tel:+46708929494">0708-92 94 94</a>
@@ -112,12 +112,13 @@
 <dialog class="lb" id="lb"><img alt=""><button type="button" data-i18n="lb.close">Stäng</button></dialog>
 <footer class="site-footer">
   <div class="wrap">
-    <span data-i18n="foot.copy">© 2015 Björlanda Bygg AB</span>
+    <span data-i18n="foot.copy">© 2026 Björlanda Bygg AB</span>
+    <nav class="foot-nav" data-i18n-aria="nav.label" aria-label="Huvudmeny"><a href="index.html" data-i18n="nav.home">Hem</a><a href="kontakt.html" data-i18n="nav.contact">Kontakt</a></nav>
     <span>Friluftsvägen 2A, 423 63 Torslanda · <a href="tel:+46708929494">0708-92 94 94</a></span>
     <a class="ig" href="https://www.instagram.com/bjorlandabygg/" target="_blank" rel="noopener" aria-label="Instagram: @bjorlandabygg"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a>
   </div>
 </footer>
-<script src="assets/img/before-after/pairs.js?v=3"></script>
-<script src="js/main.js?v=4"></script>
+<script src="assets/img/before-after/pairs.js?v=6"></script>
+<script src="js/main.js?v=6"></script>
 </body>
 </html>

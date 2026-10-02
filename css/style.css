@@ -52,10 +52,11 @@ p { margin: 0; max-width: 68ch; text-wrap: pretty; }
 .lang { display: inline-flex; border: 1.5px solid var(--line); border-radius: 999px; padding: 2px; }
 .lang button {
   font: 700 0.85rem var(--body); letter-spacing: 0.04em; border: 0; background: transparent; color: var(--muted);
-  padding: 0.4rem 0.75rem; border-radius: 999px; cursor: pointer; min-height: 2.25rem;
+  padding: 0.4rem 0.75rem; border-radius: 999px; cursor: pointer; min-height: 2.75rem; min-width: 2.75rem;
 }
 .lang button[aria-pressed="true"] { background: var(--ink); color: #fff; }
 .tel {
+  display: inline-flex; align-items: center; gap: 0.5rem;
   font-weight: 700; text-decoration: none; background: var(--blue); color: #fff;
   padding: 0.65rem 1.1rem; border-radius: 999px; white-space: nowrap; font-variant-numeric: tabular-nums;
   transition: background 0.2s;
@@ -63,10 +64,13 @@ p { margin: 0; max-width: 68ch; text-wrap: pretty; }
 .tel:hover { background: var(--blue-deep); }
 @media (max-width: 52rem) {
   .site-header { position: static; }
-  .brand img { width: 5.5rem; }
+  .site-header .wrap { flex-wrap: nowrap; gap: 0.5rem; padding-block: 0.5rem; }
+  .brand img { width: 5.25rem; }
+  .nav { display: none; }
   .lang { margin-left: auto; }
-  .nav { margin-left: 0; order: 3; }
-  .tel { order: 4; margin-left: auto; padding: 0.5rem 0.9rem; font-size: 0.95rem; }
+  .tel { width: 2.75rem; height: 2.75rem; padding: 0; justify-content: center; }
+  .tel span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .hero-call { display: none; }
   .work { scroll-margin-top: 1rem; }
 }
 
@@ -81,6 +85,8 @@ p { margin: 0; max-width: 68ch; text-wrap: pretty; }
 .btn-primary:hover { background: #8a2615; }
 .btn-ghost { border-color: var(--ink); color: var(--ink); }
 .btn-ghost:hover { background: var(--ink); color: #fff; }
+.btn-text { font: 700 1rem var(--body); color: var(--ink); background: none; border: 0; padding: 0.9rem 0.5rem; min-height: 2.75rem; text-decoration: underline; text-underline-offset: 0.25em; text-decoration-thickness: 2px; cursor: pointer; display: inline-flex; align-items: center; }
+.btn-text:hover { color: var(--red); }
 .btn .arrow { transition: transform 0.3s var(--ease); }
 .btn:hover .arrow { transform: translateX(4px); }
 
@@ -88,7 +94,7 @@ p { margin: 0; max-width: 68ch; text-wrap: pretty; }
 .hero { padding-block: clamp(1.5rem, 3.5vw, 3rem) clamp(1rem, 2vw, 1.5rem); }
 .hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: center; }
 .hero h1 em { font-style: normal; color: var(--blue); }
-.hero .lede { margin-top: 1.5rem; font-size: clamp(1.15rem, 1.6vw, 1.4rem); color: var(--muted); max-width: 34ch; }
+.hero .lede { margin-top: 1.5rem; font-size: clamp(1.15rem, 1.6vw, 1.4rem); color: var(--muted); max-width: 40ch; text-wrap: balance; }
 .hero .lede strong { color: var(--ink); }
 .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
 .gable {
@@ -161,7 +167,7 @@ p { margin: 0; max-width: 68ch; text-wrap: pretty; }
 /* Contact page */
 .page-head { padding-block: clamp(2.5rem, 6vw, 4.5rem) 1.5rem; }
 .contact { padding-bottom: clamp(3rem, 7vw, 6rem); }
-.contact .wrap { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+.contact .wrap { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
 form { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1.25rem, 3vw, 2.25rem); display: grid; gap: 1.1rem; }
 label { display: grid; gap: 0.4rem; font-weight: 700; font-size: 0.95rem; }
 input, textarea {
@@ -170,7 +176,14 @@ input, textarea {
 }
 textarea { min-height: 9rem; resize: vertical; }
 input:hover, textarea:hover { border-color: #9fb0cc; }
-input:focus, textarea:focus { outline: none; border-color: var(--blue); background: #fff; box-shadow: 0 0 0 3px var(--blue-wash); }
+input:focus-visible, textarea:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; border-color: var(--blue); background: #fff; }
+.ba-range:focus-visible { outline: none; }
+input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: var(--red); }
+.err { color: var(--red); font-weight: 600; font-size: 0.92rem; }
+.err:empty { display: none; }
+.form-note { color: var(--muted); font-size: 0.95rem; }
+.fallback { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.5rem; font-size: 0.95rem; color: var(--muted); }
+.fallback a { font-weight: 700; color: var(--blue-deep); padding-block: 0.6rem; }
 input:user-invalid, textarea:user-invalid { border-color: var(--red); }
 .status:empty { display: none; }
 .status { min-height: 0; font-weight: 600; color: var(--blue-deep); }
@@ -179,14 +192,16 @@ input:user-invalid, textarea:user-invalid { border-color: var(--red); }
 .card-address h2 { font-size: 1.6rem; }
 .card-address address { font-style: normal; font-size: 1.15rem; line-height: 1.5; }
 .card-address a { font-weight: 700; }
+.card-address a.big { display: inline-flex; align-items: center; min-height: 2.75rem; font-family: var(--display); font-size: clamp(1.4rem, 4.6vw, 2rem); letter-spacing: -0.02em; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
 .card-address .row { display: grid; gap: 0.15rem; }
 .card-address .k { font-size: 0.9rem; color: #cfdcff; font-weight: 600; }
 @media (max-width: 52rem) { .contact .wrap { grid-template-columns: 1fr; } }
 
 /* Footer */
 .site-footer { background: var(--ink); color: #c8d2e6; padding-block: 2rem; font-size: 0.95rem; }
-.site-footer .wrap { display: flex; flex-wrap: wrap; gap: 0.75rem 2rem; justify-content: space-between; }
-.site-footer a { color: #fff; }
+.site-footer .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 2rem; justify-content: space-between; }
+.site-footer a { color: #fff; display: inline-flex; align-items: center; min-height: 2.75rem; }
+.foot-nav { display: flex; gap: 0.5rem 1.25rem; flex-wrap: wrap; }
 .site-footer .ig { display: inline-grid; place-items: center; width: 2.75rem; height: 2.75rem; text-decoration: none; border-radius: 50%; transition: background 0.2s; }
 .site-footer .ig:hover { background: rgb(255 255 255 / 0.12); }
 .site-footer .ig:focus-visible { outline-color: #fff; }
