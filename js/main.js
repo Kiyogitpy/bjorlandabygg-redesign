@@ -66,7 +66,7 @@ const store = {
   get() { try { return localStorage.getItem("lang"); } catch { return null; } },
   set(v) { try { localStorage.setItem("lang", v); } catch { /* storage blocked */ } }
 };
-let lang = store.get() || ((navigator.language || "sv").startsWith("sv") ? "sv" : "en");
+let lang = store.get() || "sv"; // Swedish unless the visitor has picked English
 if (!I18N[lang]) lang = "sv";
 
 function t(key) { return I18N[lang][key] ?? I18N.sv[key] ?? key; }
