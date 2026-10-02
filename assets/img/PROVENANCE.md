@@ -13,3 +13,7 @@ All images are pre-existing client assets from the live site or the company's In
 | work-van-house.jpg | Instagram post, 2026-06-25 (640px scrape) |
 
 Instagram profile: https://www.instagram.com/bjorlandabygg/. The Instagram images are only 640px; replace with originals from the client for sharper tiles.
+
+## Before / after slider
+
+kok-fore.jpg / kok-efter.jpg: supplied by the project owner from their Downloads folder (before.avif, after2.jpg). Original source and licence unknown; confirm rights before launch. Resized to max 1400x2100.

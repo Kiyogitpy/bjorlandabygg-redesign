@@ -142,6 +142,7 @@ if (baSection) {
       i = (n + pairs.length) % pairs.length;
       const p = pairs[i];
       before.src = dir + p.before; after.src = dir + p.after;
+      frame.style.setProperty("--arn", p.ratio || 1.7778);
       cap.dataset.sv = p.caption_sv || ""; cap.dataset.en = p.caption_en || "";
       count.textContent = pairs.length > 1 ? `${i + 1} / ${pairs.length}` : "";
       set(50); apply();
