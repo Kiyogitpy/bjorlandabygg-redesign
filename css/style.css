@@ -70,7 +70,6 @@ p { margin: 0; max-width: 68ch; text-wrap: pretty; }
   .lang { margin-left: auto; }
   .tel { width: 2.75rem; height: 2.75rem; padding: 0; justify-content: center; }
   .tel span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-  .hero-call { display: none; }
   .work { scroll-margin-top: 1rem; }
 }
 
@@ -87,6 +86,8 @@ p { margin: 0; max-width: 68ch; text-wrap: pretty; }
 .btn-ghost:hover { background: var(--ink); color: #fff; }
 .btn-text { font: 700 1rem var(--body); color: var(--ink); background: none; border: 0; padding: 0.9rem 0.5rem; min-height: 2.75rem; text-decoration: underline; text-underline-offset: 0.25em; text-decoration-thickness: 2px; cursor: pointer; display: inline-flex; align-items: center; }
 .btn-text:hover { color: var(--red); }
+.hero-call { gap: 0.5rem; text-decoration: none; }
+.hero-call span { text-decoration: underline; text-underline-offset: 0.25em; text-decoration-thickness: 2px; }
 .btn .arrow { transition: transform 0.3s var(--ease); }
 .btn:hover .arrow { transform: translateX(4px); }
 
