@@ -1,5 +1,5 @@
 // Before/after pairs. Add photos to this folder and list them here (an empty list hides the section).
-// ratio = width / height of the photos in the pair; it sets the shape of the slider frame.
+// Photos are cropped (cover) to the wide slider frame; keep the subject near the middle.
 window.BA_PAIRS = [
-  { before: "kok-fore.jpg", after: "kok-efter.jpg", ratio: 0.6667 }
+  { before: "kok-fore.jpg", after: "kok-efter.jpg" }
 ];
