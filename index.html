@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Björlanda Bygg AB – det personliga byggföretaget</title>
+<meta name="description" content="Björlanda Bygg AB – 35 års erfarenhet från tanke till färdigt arbete. Torslanda, Göteborg.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,600..800&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-doc="doc.home">
+<a class="skip" href="#main" data-i18n="skip">Hoppa till innehållet</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/img/logo.png" width="250" height="150" alt="Björlanda Bygg AB"></a>
+    <nav class="nav" data-i18n-aria="nav.label" aria-label="Huvudmeny">
+      <a href="index.html" data-i18n="nav.home" aria-current="page">Hem</a>
+      <a href="kontakt.html" data-i18n="nav.contact" >Kontakt</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Språk / Language">
+      <button type="button" data-lang="sv" aria-pressed="true">SV</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <a class="tel" href="tel:+46708929494" data-i18n="tel.label">Ring 0708-92 94 94</a>
+  </div>
+</header>
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1 data-i18n="hero.h1">Välkommen till det <em>personliga</em> byggföretaget.</h1>
+        <p class="lede" data-i18n="hero.lede"><strong>35 års erfarenhet</strong> från tanke till färdigt arbete.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#arbeten"><span data-i18n="hero.cta">Se våra arbeten</span> <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M6 14l6 6 6-6"/></svg></a>
+          <a class="btn btn-ghost" href="tel:+46708929494" data-i18n="hero.call">Ring Patrik</a>
+        </div>
+      </div>
+      <div class="gable"><img src="assets/img/cabin-sky.jpg" width="1600" height="976" alt="Rött timmerhus på en klippa mot blå himmel" data-i18n-alt="hero.alt"></div>
+    </div>
+  </section>
+
+  <section class="ba" id="fore-efter" aria-labelledby="ba-h" hidden>
+    <div class="wrap">
+      <h2 id="ba-h" data-i18n="ba.h2">Före och efter</h2>
+      <p class="ba-hint" data-i18n="ba.hint">Dra i reglaget för att jämföra.</p>
+      <div class="ba-stage">
+        <figure class="ba-fig">
+          <div class="ba-frame" id="ba-frame">
+            <img class="ba-after" alt="" id="ba-after">
+            <img class="ba-before" alt="" id="ba-before">
+            <span class="ba-tag b" data-i18n="ba.before">Före</span><span class="ba-tag a" data-i18n="ba.after">Efter</span>
+            <span class="ba-line"></span>
+            <span class="ba-knob"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span>
+            <input class="ba-range" id="ba-range" type="range" min="0" max="100" value="50" data-i18n-aria-live="ba.aria">
+            <button class="ba-nav ba-prev" type="button" id="ba-prev" data-i18n-aria="ba.prev" aria-label="Föregående"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+            <button class="ba-nav ba-next" type="button" id="ba-next" data-i18n-aria="ba.next" aria-label="Nästa"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+          </div>
+          <figcaption><span id="ba-cap" data-sv=""></span> <span class="ba-count" id="ba-count" aria-live="polite"></span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="work" id="arbeten" aria-labelledby="work-h">
+    <div class="wrap">
+      <div class="work-head">
+        <h2 id="work-h" data-i18n="work.h2">Våra arbeten</h2>
+        <a class="ig-btn" href="https://www.instagram.com/bjorlandabygg/" target="_blank" rel="noopener" aria-label="Instagram: @bjorlandabygg" title="Instagram"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+      <div class="mosaic">
+        <button class="tile t-roof" type="button"><img src="assets/img/work-roof.jpg" width="640" height="640" alt="" data-i18n-alt="alt.roof"><span class="cap" data-i18n="cap.out">Utomhus</span></button>
+        <button class="tile t-oak" type="button"><img src="assets/img/work-kitchen-oak.jpg" width="640" height="480" alt="" data-i18n-alt="alt.oak" loading="lazy"><span class="cap" data-i18n="cap.kitchen">Kök</span></button>
+        <button class="tile t-white" type="button"><img src="assets/img/work-kitchen-white.jpg" width="640" height="640" alt="" data-i18n-alt="alt.white" loading="lazy"><span class="cap" data-i18n="cap.kitchen">Kök</span></button>
+        <button class="tile t-van" type="button"><img src="assets/img/work-van-house.jpg" width="640" height="640" alt="" data-i18n-alt="alt.van" loading="lazy"><span class="cap" data-i18n="cap.co">Björlanda Bygg</span></button>
+        <button class="tile t-silver" type="button"><img src="assets/img/van-silver.jpg" width="1802" height="1126" alt="" data-i18n-alt="alt.silver" loading="lazy"><span class="cap" data-i18n="cap.co">Björlanda Bygg</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="areas-h">
+    <div class="wrap">
+      <h2 id="areas-h" data-i18n="areas.h2">Våra områden</h2>
+      <p class="intro" data-i18n="areas.intro">Här nedan kan Du ta del av några av våra områden.</p>
+      <div class="areas">
+        <div>
+          <h3 data-i18n="areas.out">Utomhus</h3>
+          <ul><li data-i18n="o1">Fönster</li><li data-i18n="o2">Fasader</li><li data-i18n="o3">Altaner</li><li data-i18n="o4">Uterum</li><li data-i18n="o5">Staket</li><li data-i18n="o6">Tillbyggnader</li></ul>
+        </div>
+        <div>
+          <h3 data-i18n="areas.in">Inomhus</h3>
+          <ul><li data-i18n="i1">Badrum</li><li data-i18n="i2">Kök</li><li data-i18n="i3">Tvättstugor</li><li data-i18n="i4">Parkettgolv</li><li data-i18n="i5">Trappor</li><li data-i18n="i6">Lister</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="call">
+    <div class="wrap">
+      <div>
+        <h2 data-i18n="call.h2">För mer info:</h2>
+        <p data-i18n="call.p">Patrik Pettersson svarar själv.</p>
+      </div>
+      <div>
+        <a class="big-tel" href="tel:+46708929494">0708-92 94 94</a>
+        <div class="cta-row"><a class="btn btn-ghost" href="kontakt.html"><span data-i18n="call.cta">Kontakta oss</span> <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </div>
+  </section>
+</main>
+<dialog class="lb" id="lb"><img alt=""><button type="button" data-i18n="lb.close">Stäng</button></dialog>
+<footer class="site-footer">
+  <div class="wrap">
+    <span data-i18n="foot.copy">© 2015 Björlanda Bygg AB</span>
+    <span>Friluftsvägen 2A, 423 63 Torslanda · <a href="tel:+46708929494">0708-92 94 94</a></span>
+    <a class="ig" href="https://www.instagram.com/bjorlandabygg/" target="_blank" rel="noopener" aria-label="Instagram: @bjorlandabygg"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a>
+  </div>
+</footer>
+<script src="assets/img/before-after/pairs.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
